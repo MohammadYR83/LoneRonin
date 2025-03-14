@@ -43,12 +43,15 @@ protected:
     virtual void OnSphereEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, // virtual زدیم که بتونیم تو کلاس سلاح به سبکی که خودمون دوست داریم استفاده کنیم
         UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
+    // یک اشاره‌گر به `UStaticMeshComponent` که مدل سه‌بعدی آیتم را نگه می‌دارد.
+// `UPROPERTY(VisibleAnywhere)` یعنی این متغیر از همه جا دیده می‌شود ولی فقط از طریق کد قابل تغییر است.
+    // رید انلی رو وارد کردم که اوکی باشه  تو استفاده ازش برای کلاس ویپن و تو بخش پروتکد واردش کردم
+    UPROPERTY(VisibleAnywhere , BlueprintReadOnly)
+    UStaticMeshComponent* ItemMesh;
+
 private:
 
-    // یک اشاره‌گر به `UStaticMeshComponent` که مدل سه‌بعدی آیتم را نگه می‌دارد.
-  // `UPROPERTY(VisibleAnywhere)` یعنی این متغیر از همه جا دیده می‌شود ولی فقط از طریق کد قابل تغییر است.
-    UPROPERTY(VisibleAnywhere)
-    UStaticMeshComponent* ItemMesh;
+
 
     // یک اشاره‌گر به `USphereComponent` که محدوده‌ی برخورد آیتم را مشخص می‌کند.
     UPROPERTY(VisibleAnywhere)

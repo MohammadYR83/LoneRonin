@@ -57,7 +57,7 @@ void AItem::Tick(float DeltaTime)
     float DeltaZ = Amplitude * FMath::Sin(RunningTime * TimeConstant);
 
     // اعمال تغییر در موقعیت آیتم در محور Z
-    AddActorWorldOffset(FVector(0.f, 0.f, DeltaZ));
+    //AddActorWorldOffset(FVector(0.f, 0.f, DeltaZ));
 }
 
 // تابعی که هنگام شروع برخورد با Sphere اجرا می‌شود
